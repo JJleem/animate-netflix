@@ -1,18 +1,19 @@
 import React from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Home from "./Routers/Home";
-import Tv from "./Routers/Tv";
-import Search from "./Routers/Search";
-import Header from "./Components/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./routers/Home";
+import Tv from "./routers/Tv";
+import Search from "./routers/Search";
 
 function App() {
   return (
     <BrowserRouter>
-    <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/movies/:movieId" element={<Home />} />
         <Route path="/tv" element={<Tv />} />
-        <Route path="/searh" element={<Search />} />
+        <Route path="/search/:query" element={<Search />} />
       </Routes>
     </BrowserRouter>
   );

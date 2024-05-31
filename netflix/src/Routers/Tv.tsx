@@ -1,11 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+
 const Tv = () => {
-  return <Container>Tv</Container>;
+  return (
+    <div style={{ backgroundColor: "whitesmoke", height: "200vh" }}>Tv</div>
+  );
 };
 
 export default Tv;
-const Container = styled.div`
-  background-color: whitesmoke;
-  height: 200vh;
-`;
